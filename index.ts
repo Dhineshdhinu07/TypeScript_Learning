@@ -41,3 +41,59 @@
 // console.log(color); // The output will be "true"
 
 //-------------------------------------------------//
+
+//Functional parameters annotations
+//Regular func
+// function addNum (num: number){
+//     return num + 1;
+// }
+
+// const result = addNum(5);
+// console.log(result); 
+
+//Arrow func
+// const double = (x: number, y: number) => x * y;
+// const result2 = double(5, 6);
+// console.log(result2);
+
+// ---------------------------------------------- //
+
+//Default parameters(params)
+
+// function greet(person: string = "Developer"){ //Default value for the function parameter.
+//     return `Hello ${person}`;
+// }
+
+// const res = greet("Dhinesh");
+// console.log(res);
+
+// ---------------------------------------------- //
+
+//Return Annotations
+// Regular func
+// function double(x: number): number // This is the return annotations which is used to declare the return type.
+// {
+//     return x * x;
+// }
+// const result = double(5);
+// console.log(result);
+
+// // Arrow func
+
+// const double2 = (x: number): number => x * x;
+// const result2 = double2(5);
+// console.log(result2);
+
+// ------------------------------------------------- //
+
+//Void return type
+
+// function printMessage(msg: string): void{
+//     console.log(`This is my new message: ${msg}`);
+// }
+
+// const res = printMessage("Hello");
+
+// -------------------------------------------------- //
+
+//Never keyword
