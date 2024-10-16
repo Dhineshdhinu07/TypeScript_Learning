@@ -117,3 +117,58 @@
 // }
 
 // x = neverReturns(); //This line will cause compile time error because the function never returns.
+
+// -------------------------------------------------- //
+
+//Arrays
+
+// const nums: number[] = [1, 2, 3, 4];
+// console.log(nums);
+// const myName: string[] = ["Dhi"];
+// const names: Array<string> = ["Alice", "Bob", "Charlie"];
+// names.push("Dan");
+// console.log(names);
+
+// -------------------------------------------------- //
+
+//Multi Dimensional Arrays
+
+// const single: number[] = [1, 2, 3, 4, 5];
+// const double: number[][] = [[1, 2], [3, 4]];
+// const triple: number[][][] = [
+//     [
+//         [1, 2, 3],
+//         [4, 5, 6],
+//         [7, 8, 9],
+//     ]
+// ];
+
+// console.log(single);
+// console.log(double);
+// console.log(triple);
+
+// -------------------------------------------------- //
+
+//Objects
+//Declaration
+
+// const person: {firstName: string; lastName: string; age: number} = {
+//     firstName: "Dhinesh",
+//     lastName: "M",
+//     age: 21
+// }
+
+// console.log(`Name: ${person.firstName} ${person.lastName}, Age: ${person.age}`);
+
+//Object in functions
+
+// function printUser():{name: string; age: number; location: string}  {
+//     return {
+//         name: "Dhinesh",
+//         age: 21,
+//         location: "Chennai"
+//     }
+// }
+
+// console.log(printUser());
+// -------------------------------------------------- //
