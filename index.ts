@@ -96,4 +96,24 @@
 
 // -------------------------------------------------- //
 
-//Never keyword
+//Never keyword - used in:
+//Func that throws error
+
+// function throwError(msg: string): never{
+//     throw new Error(msg);
+//  }
+
+//func that runs infinite loop
+
+// function infiniteLoop(): never{
+//     while(true){}
+//  }
+
+//variable that doesn't have value:
+
+// let x = never;
+// function neverReturns(): never{
+//    while(true){}
+// }
+
+// x = neverReturns(); //This line will cause compile time error because the function never returns.
