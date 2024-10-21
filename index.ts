@@ -187,3 +187,99 @@
 // printPerson(myPerson);
 
 // ------------------------------------------------ //
+
+//Optional Property
+
+// type User = {
+//     name: string;
+//     age?: number;
+//     location: string;
+// }
+
+// const user: User = {
+//     name: "Dhinesh",
+//     age: 21,
+//     location: "Chennai"
+// };
+//  const user1: User = {
+//     name: "Dhinu",
+//     location: "Chennai"
+//  }
+// console.log(`Name: ${user1.name}, Age: ${user1.age}, Location: ${user1.location}`);
+
+// ------------------------------------------------- //
+
+//ReadOnly Property
+
+// type User = {
+//     name: string;
+//     age?: number;
+//     readonly location: string;
+// }
+
+// const user: User = {
+//     name: "Dhinesh",
+//     age: 21,
+//     location: "Chennai"
+// };
+// user.location = "Mumbai" //It will throw error as :- Cannot assign to'location' because it is a readonly property
+//  const user1: User = {
+//     name: "Dhinu",
+//     location: "Chennai"
+//  }
+// console.log(`Name: ${user1.name}, Age: ${user1.age}, Location: ${user1.location}`);
+
+// ------------------------------------------------- //
+
+//Intersection Type
+
+// type UserInfo = {
+//     first: string;
+//     last: string;
+//     age: number;
+// }
+// type AccountDetails = {
+//     email: string;
+//     password: string;
+// }
+
+// type User = UserInfo & AccountDetails;
+
+// const user: User = {
+//     first: "Dhinesh",
+//     last: "M",
+//     age: 21,
+//     email: "dhi@me.com",
+//     password: "12345"
+// }
+
+// console.log(`Name: ${user.first} ${user.last}, Age: ${user.age}, Email: ${user.email}, Password: ${user.password}`);
+
+// ------------------------------------------------- //
+
+//Union Type
+
+// let password : string | number = 20;
+
+// type UserInfo = {
+//     first: string;
+//     last: string;
+//     age: number;
+// }
+
+// type AccountDetails = {
+//     email: string;
+//     password: string | number;
+// }
+
+
+// let user: UserInfo | AccountDetails = {
+//     email: "dhi@gmail.com",
+//     password: 12345
+// }
+
+// const items: (number | string)[] = [1, 2, 3, "Hii"];
+
+// console.log(items)
+
+// --------------------------------------------------//
