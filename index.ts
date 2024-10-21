@@ -172,3 +172,18 @@
 
 // console.log(printUser());
 // -------------------------------------------------- //
+//Type Aliases
+
+// type MyString = string; // syntax
+// //EXAMPLE
+// type Person = {
+//    name: string;
+//    age: number;
+// };
+// function printPerson(person: Person) {
+//    console.log(`Name: ${person.name}, Age: ${person.age}`);
+// }
+// const myPerson: Person = {name: "Dhinu", age: 21};
+// printPerson(myPerson);
+
+// ------------------------------------------------ //
