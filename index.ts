@@ -299,3 +299,250 @@
 // isTrue = false; //error
 
 // ---------------------------------------------------- //
+
+//Tuples
+
+// let myTuple: [number, string];
+// myTuple = [10, "Dhinu"];
+// // myTuple = [10, 20]; //error
+// console.log(myTuple);
+// console.log(myTuple[0]);
+
+// const persons : [string, string, string] = ["Alice", "Bob", "Charlie"];
+// console.log(persons);
+// console.log(persons[0]); // Alice
+
+// ---------------------------------------------------- //
+
+//Enums
+
+// enum WeatherConditions {
+//     SUNNY = "sunny",
+//     CLOUDY = "cloudy",
+//     RAINY = "rainy",
+//     SNOWY = "snowy"
+// }
+// console.log(WeatherConditions.SNOWY); //If the Values not assigned it will give 3 
+// const weather: WeatherConditions = WeatherConditions.SUNNY;
+// console.log(`The current weather is ${weather}`);
+
+// ------------------------------------------------------------//
+
+// OOP
+
+// class Person {
+//     name: string;
+//     age: number;
+
+//     constructor(name: string, age:number){
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+
+// const person = new Person("Dhinesh", 21);
+// console.log(person); // Output : Person { name: 'Dhinesh', age: 21 }
+
+//Access modifiers
+//public
+// class Human {
+//     // public first: string;
+//     private first : string;
+//     public last : string;
+//     protected age : number;
+//     constructor(first: string, last: string, age: number){
+//         this.first = first;
+//         this.last = last;
+//         this.age = age;
+//     }
+//     //Below method is used to get the private variables from the class
+//     getName(): string {
+//         return `${this.first} ${this.last}`;
+//     }
+// }
+
+// class Person extends Human {
+//     constructor(first: string, last: string, age: number){
+//         super(first,last,age);
+//     }
+//     getAge(): number {
+//         return this.age;
+//     }
+// }
+
+// let p1 = new Person("Dhinesh", "M", 21);
+// console.log(`Hi there, I'm ${p1.getName()} and I'm ${p1.getAge()} years old!!!`);
+
+//---------------------------------------------------- //
+
+//Getters and Setters
+
+// class MyClass {
+//     private _idNum : number = 8;
+//     get idNum(): number {
+//         return this._idNum;
+//     }
+//     set idNum(value: number){
+//         // if(value < 0){
+//         //     throw new Error("Id cannot be negative");
+//         // }
+//         this._idNum = value;
+//     }
+// }
+
+// const myInstance = new MyClass();
+// console.log(`Current value is ${myInstance.idNum}`)
+// myInstance.idNum = 10;
+// console.log(`Current value is ${myInstance.idNum}`)
+
+// -------------------------------------------------- //
+
+//Interface
+
+// interface Computer {
+//     name: string;
+//     price: number;
+//     ram: number;
+// }
+
+// const computer: Computer = {
+//     name: "MAC",
+//     price: 120000,
+//     ram: 8
+// }
+
+// console.log(computer)
+// console.log(computer.name)
+// console.log(computer.price)
+// console.log(computer.ram)
+
+//Interface in functions
+// interface MathOperation {
+//     (x: number, y: number): number;
+// }
+// const add: MathOperation = (a, b) => a + b;
+// console.log(add(1, 2));
+
+// const sub: MathOperation = (a, b) => a - b;
+// console.log(sub(1, 2));
+
+//Interface with methods
+
+// interface Person {
+//     firstName: string;
+//     lastName: string;
+//     age: number;
+//     sayHello(): void;
+// }
+// function greet(person: Person){
+//     console.log(`Hello ${person.firstName} ${person.lastName}`);
+//     person.sayHello();
+// }
+
+// const dhinesh: Person = {
+//     firstName: "Dhinesh",
+//     lastName: "M",
+//     age: 21,
+//     sayHello(){
+//         console.log(`Hello I am ${this.firstName} ${this.lastName} and I am ${this.age} years old`);
+//     },
+// };
+// const danush: Person = {
+//     firstName: "Danush",
+//     lastName: "R",
+//     age: 21,
+//     sayHello(){
+//         console.log(`Hello I am ${this.firstName} ${this.lastName} and I am ${this.age} years old. I'm a back-end dev`);
+//     },
+// };
+
+// greet(dhinesh)
+// greet(danush)
+
+//Extending Interfaces
+
+// interface MovieDetails {
+//     readonly name: string;
+//     ratings: number;
+//     printMovieInfo(name: string, price: number, ratings:number) : string | number;
+// }
+
+// interface MovieGenre extends MovieDetails {
+//     genre: string;
+// }
+
+// const movie: MovieGenre = {
+//     name: "Avengers - End Game",
+//     genre: "Action",
+//     ratings: 9.5,
+//     printMovieInfo(
+//         name: string, 
+//         price: number, 
+//         ratings: number
+//     ): string | number {
+//         return `The name of the movie is ${name}, its ratings are ${ratings} and price is ${price}.`;
+//     },
+// }
+
+// const movie2 : MovieGenre = {
+//     name: "Avengers - Infinity War",
+//     genre: "Action",
+//     ratings: 9.0,
+//     printMovieInfo(
+//         name: string,
+//         price: number,
+//         ratings: number
+//     ): string | number {
+//         return `Movie name: ${name} Price: ${price} Ratings: ${ratings}.`
+//     }
+// }
+
+// const res = movie.printMovieInfo("Avatar", 180, 9.1)
+// console.log(res)
+
+//Interfaces with classes
+
+// interface Vehicle{
+//     start() : void
+//     stop() : void
+// }
+
+// class Car implements Vehicle {
+//     start(): void {
+//         console.log("Car started");
+//     }
+//     stop(): void {
+//         console.log("Car stopped");
+//     }
+// }
+
+// const myCar = new Car();
+// myCar.start();// Car started
+// myCar.stop();// Car stopped
+
+//Declaration merging
+//Original interface
+// interface Car {
+//     name: string;
+//     start() : void
+// }
+// //Extended interface
+// interface Car {
+//     brand: string
+//     stop() : void
+// }
+
+// const myCar: Car = {
+//     name: "M4 Competition",
+//     brand: "BMW",
+//     start(){
+//         console.log("Car purchased...")
+//     },
+//     stop() {
+//      console.log("Car not purchased..")   
+//     }
+// }
+
+
+// console.log(`The car is ${myCar.brand} ${myCar.name} `)
+// myCar.start()
