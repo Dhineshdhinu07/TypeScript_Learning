@@ -283,3 +283,19 @@
 // console.log(items)
 
 // --------------------------------------------------//
+
+//Literal Types
+
+// let color: 'red' | 'green' | 'blue';
+// color = "red";
+// color = "yellow"; //error
+
+// let num: 1 | 2 | 3 | 4 | 5;
+// num = 1;
+// num = 6; //error
+
+// let isTrue : true;
+// isTrue = true;
+// isTrue = false; //error
+
+// ---------------------------------------------------- //
