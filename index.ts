@@ -546,3 +546,97 @@
 
 // console.log(`The car is ${myCar.brand} ${myCar.name} `)
 // myCar.start()
+
+// --------------------------------------------------- //
+//Generics
+
+// function uniqueDataType<Type>(item: Type, value: Type):[Type,Type] {
+//     return [item, value];
+// }
+
+// console.log(uniqueDataType<number>(1, 2));
+// console.log(uniqueDataType<string>("Hello", "Dan"));
+// console.log(uniqueDataType<boolean>(true, false));
+// interface Dog {
+//     name: string;
+//     breed: string;
+// }
+
+// const dog1 = uniqueDataType<Dog>({name: "Bully", breed:  "Dog"}, {name: "Default", breed: "unknown"});
+
+// console.log(dog1)
+
+
+
+// ------------------------------------------------- //
+
+//Type Narrowing
+//type guard
+
+// type MyType = string | number;
+// //type guard will use typeof 
+// function exFunc(value: MyType): void{
+//     if(typeof value === "string"){
+//         console.log(value.toUpperCase());
+//     }else{
+//         console.log(value.toFixed(2));
+//     }
+// }
+
+// exFunc("Hello");
+// exFunc(12.123);
+
+//instanceof
+
+// class Dog {
+//     bark(): void{
+//         console.log("Woff");
+//     }
+// }
+
+// class Cat{
+//     meow(): void{
+//         console.log("Meow");
+//     }
+// }
+// function animalSound(animal: Dog | Cat): void{
+//     if(animal instanceof Dog){
+//         animal.bark();
+//     }else{
+//         animal.meow();
+//     }
+// }
+
+// const myDog = new Dog();
+// const myCat = new Cat();
+
+// animalSound(myDog);
+// animalSound(myCat);
+
+//Intersection type
+
+// type Employee = {
+//     name: string;
+//     id: number;
+// }
+// type Manager = {
+//     department: string;
+//     role: string;
+// }
+
+// type CompanyEmployee = Employee & Manager;
+
+// const person: CompanyEmployee = {
+//     name: "Dhinesh",
+//     id: 1,
+//     department: "SDE",
+//     role: "Manager"
+// }
+
+// console.log(person.name);
+// console.log(person.id);
+// console.log(person.department);
+// console.log(person.role);
+
+// ------------------------------------------------ //
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Type tsc in cmd to compile the ts file into js file.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
